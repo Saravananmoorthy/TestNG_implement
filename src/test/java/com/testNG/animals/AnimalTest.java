@@ -1,8 +1,6 @@
 package com.testNG.animals;
 import com.testNG.plants.Plant;
 
-import static org.junit.Assert.assertTrue;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -43,7 +41,8 @@ public class AnimalTest {
     
     @Test
     public void whenGets2xBigger_thenHasGrown() {
-        //example of a test pass
+        //example of a need to find the bug!
+        //should throw null pointer exception
         AnimalImplementation goat = new AnimalImplementation(10);
         goat.getBigger(10);
         Assert.assertTrue(goat.didGrow());
@@ -52,6 +51,7 @@ public class AnimalTest {
     @Test
     public void whenGetsSmaller_thenNothingHappens() {
         //example of a test failure
+        //so this method needs to be fixed
         AnimalImplementation goat = new AnimalImplementation(10);
         goat.getBigger(-5);
         Assert.assertTrue(goat.getSize() == 10);
