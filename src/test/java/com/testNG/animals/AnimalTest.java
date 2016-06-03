@@ -36,7 +36,7 @@ public class AnimalTest {
         //example of a test pass
         AnimalImplementation goat = new AnimalImplementation(10);
         goat.getBigger(5);
-        Assert.assertTrue(goat.getSize() == 15);
+        Assert.assertEquals(goat.getSize(), new Integer(15));
     }
     
     @Test

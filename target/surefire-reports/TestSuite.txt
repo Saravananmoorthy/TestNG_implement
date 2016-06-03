@@ -1,9 +1,17 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.103 sec <<< FAILURE!
-whenGets2xBigger_thenHasGrown(com.testNG.animals.AnimalTest)  Time elapsed: 0.317 sec  <<< FAILURE!
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.632 sec <<< FAILURE!
+whenGets2xBigger_thenHasGrown(com.testNG.animals.AnimalTest)  Time elapsed: 0.267 sec  <<< FAILURE!
 java.lang.NullPointerException
 	at com.testNG.animals.Animal.didGrow(Animal.java:22)
-	at com.testNG.animals.AnimalTest.whenGets2xBigger_thenHasGrown(AnimalTest.java:47)
+	at com.testNG.animals.AnimalTest.whenGets2xBigger_thenHasGrown(AnimalTest.java:48)
+
+whenGetsSmaller_thenNothingHappens(com.testNG.animals.AnimalTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at com.testNG.animals.AnimalTest.whenGetsSmaller_thenNothingHappens(AnimalTest.java:57)
 

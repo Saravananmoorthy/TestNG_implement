@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,6 +102,11 @@
                       <span>
                         <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="com.testNG.animals.AnimalTest" hash-for-method="whenGets2xBigger_thenHasGrown">whenGets2xBigger_thenHasGrown</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="com.testNG.animals.AnimalTest" hash-for-method="whenGetsSmaller_thenNothingHappens">whenGetsSmaller_thenNothingHappens</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Command_line_suite -->
@@ -116,11 +121,6 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="com.testNG.animals.AnimalTest" hash-for-method="whenGetsBigger_thenHasGottenBigger">whenGetsBigger_thenHasGottenBigger</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="com.testNG.animals.AnimalTest" hash-for-method="whenGetsSmaller_thenNothingHappens">whenGetsSmaller_thenNothingHappens</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Command_line_suite -->
@@ -148,8 +148,19 @@
                   <span class="method-name">whenGets2xBigger_thenHasGrown</span>
                   <div class="stack-trace">java.lang.NullPointerException
 	at com.testNG.animals.Animal.didGrow(Animal.java:22)
-	at com.testNG.animals.AnimalTest.whenGets2xBigger_thenHasGrown(AnimalTest.java:47)
+	at com.testNG.animals.AnimalTest.whenGets2xBigger_thenHasGrown(AnimalTest.java:48)
 ... Removed 34 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="whenGetsSmaller_thenNothingHappens">
+                  </a> <!-- whenGetsSmaller_thenNothingHappens -->
+                  <span class="method-name">whenGetsSmaller_thenNothingHappens</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at com.testNG.animals.AnimalTest.whenGetsSmaller_thenNothingHappens(AnimalTest.java:57)
+... Removed 38 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -166,13 +177,6 @@
                   <a name="whenGetsBigger_thenHasGottenBigger">
                   </a> <!-- whenGetsBigger_thenHasGottenBigger -->
                   <span class="method-name">whenGetsBigger_thenHasGottenBigger</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="whenGetsSmaller_thenNothingHappens">
-                  </a> <!-- whenGetsSmaller_thenNothingHappens -->
-                  <span class="method-name">whenGetsSmaller_thenNothingHappens</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -235,7 +239,7 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'whenGets2xBigger_thenHasGrown')
 data.setCell(0, 2, 'com.testNG.animals.AnimalTest')
-data.setCell(0, 3, 314);
+data.setCell(0, 3, 261);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'whenGetsBigger_thenHasGottenBigger')
 data.setCell(1, 2, 'com.testNG.animals.AnimalTest')
@@ -243,12 +247,12 @@ data.setCell(1, 3, 3);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'whenGetsSmaller_thenNothingHappens')
 data.setCell(2, 2, 'com.testNG.animals.AnimalTest')
-data.setCell(2, 3, 0);
+data.setCell(2, 3, 1);
 window.suiteTableData['Command_line_suite']= { tableData: data, tableDiv: 'times-div-Command_line_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 317 ms</span>
+              <span class="suite-total-time">Total running time: 265 ms</span>
               <div id="times-div-Command_line_suite">
               </div> <!-- times-div-Command_line_suite -->
             </div> <!-- times-div -->
@@ -283,11 +287,13 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">whenGetsBigger_thenHasGottenBigger</span>
-                <span class="method-start">317 ms</span>
+                <span class="method-start">264 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">whenGetsSmaller_thenNothingHappens</span>
-                <span class="method-start">321 ms</span>
+                <span class="method-start">268 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
