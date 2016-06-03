@@ -1,13 +1,16 @@
 package com.testNG.animals;
 import com.testNG.plants.Plant;
 
+import static org.junit.Assert.assertTrue;
+
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class AnimalTest {
     // does a test of abstract class animals
     
-    private class AnimalMock extends Animal{
-        public AnimalMock(Integer size_) {
+    private class AnimalImplementation extends Animal{
+        public AnimalImplementation(Integer size_) {
             super(size_);
             // TODO Auto-generated constructor stub
         }
@@ -31,8 +34,27 @@ public class AnimalTest {
     }
 
     @Test
-    public void test1() {
-        System.out.println("hello world");
+    public void whenGetsBigger_thenHasGottenBigger() {
+        //example of a test pass
+        AnimalImplementation goat = new AnimalImplementation(10);
+        goat.getBigger(5);
+        Assert.assertTrue(goat.getSize() == 15);
+    }
+    
+    @Test
+    public void whenGets2xBigger_thenHasGrown() {
+        //example of a test pass
+        AnimalImplementation goat = new AnimalImplementation(10);
+        goat.getBigger(10);
+        Assert.assertTrue(goat.didGrow());
+    }
+    
+    @Test
+    public void whenGetsSmaller_thenNothingHappens() {
+        //example of a test failure
+        AnimalImplementation goat = new AnimalImplementation(10);
+        goat.getBigger(-5);
+        Assert.assertTrue(goat.getSize() == 10);
     }
    
 

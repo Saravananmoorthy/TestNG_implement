@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="TestNgMavenExampleSuite" parallel="false">
+  <test name="TestNgMavenTest">
+    <classes>
+      <class name="com.javacodegeeks.testng.maven.TestNgMavenExample"/>
+      <class name="com.javacodegeeks.testng.maven.TestNgMavenSecondClass"/>
+    </classes>
+  </test>
+  
+  <test name="Animal_Tests">
+    <classes>
+      <class name="com.testNG.animals.AnimalTest"/>
+      <class name="com.javacodegeeks.testng.maven.TestNgMavenSecondClass"/>
+    </classes>
+  </test>
+  
+  <test name="Plant_Tests">
+    <classes>
+      <class name="com.javacodegeeks.testng.maven.TestNgMavenExample"/>
+      <class name="com.javacodegeeks.testng.maven.TestNgMavenSecondClass"/>
+    </classes>
+  </test>
+  
+  
+</suite>

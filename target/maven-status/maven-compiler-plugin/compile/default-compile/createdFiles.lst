@@ -1,4 +1,9 @@
 com/testNG/plants/Plant.class
-com/testNG/land/Land.class
+com/testNG/plants/Tree.class
+com/testNG/animals/Gazelle.class
 com/testNG/animals/Animal.class
+com/testNG/land/Land.class
+com/testNG/plants/Grass.class
+com/testNG/animals/Hippo.class
+com/testNG/animals/Lion.class
 com/testNG/land/Savannah.class

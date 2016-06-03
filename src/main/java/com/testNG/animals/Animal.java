@@ -15,6 +15,9 @@ public abstract class Animal {
     public abstract boolean canEat(Animal animal);
     public abstract boolean canEat(Plant plant);
     public abstract String printName();
+    public void getBigger(Integer grow) {
+        size += grow;
+    }
     public Boolean didGrow(){
        if (size > reproduceSize) {
            size = size/2;

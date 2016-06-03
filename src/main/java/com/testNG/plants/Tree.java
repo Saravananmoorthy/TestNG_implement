@@ -1,6 +1,5 @@
 package com.testNG.plants;
 
-import javax.swing.event.TreeSelectionEvent;
 
 public class Tree extends Plant{
     

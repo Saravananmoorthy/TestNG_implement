@@ -4,6 +4,11 @@ import com.testNG.plants.Plant;
 
 public class Lion extends Animal {
 
+    public Lion(Integer size_) {
+        super(size_);
+        // TODO Auto-generated constructor stub
+    }
+
     @Override
     public boolean canEat(Animal animal) {
         if (animal.getSize() < this.getSize()) {
@@ -21,7 +26,7 @@ public class Lion extends Animal {
     @Override
     public String printName() {
         // TODO Auto-generated method stub
-        return null;
+        return "";
     }
 
 }
