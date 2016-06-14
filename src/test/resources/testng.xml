@@ -3,7 +3,7 @@
   
   <test name="Animal_Tests">
     <classes>
-      <class name="com.testNG.animals.AnimalTest"/>
+       <!-- <class name="com.testNG.animals.AnimalTest"/> -->
       <!-- add class Lion here -->
     </classes>
   </test>

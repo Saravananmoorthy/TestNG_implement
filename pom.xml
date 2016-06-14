@@ -1,44 +1,48 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.javacodegeeks.testng.maven</groupId>
-  <artifactId>testNgMavenExample</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <dependencies>		
-		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>6.8.8</version>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
-	
-	
-	<reporting>
-	  <plugins>
-		<!-- Normally, we take off the dependency report, saves time. -->
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-project-info-reports-plugin</artifactId>
-			<version>2.7</version>
-			<configuration>
-				<dependencyLocationsEnabled>false</dependencyLocationsEnabled>
-			</configuration>
-		</plugin>
-
-		<plugin>
-			<groupId>org.codehaus.mojo</groupId>
-			<artifactId>cobertura-maven-plugin</artifactId>
-			<version>2.6</version>
-			<configuration>
-				<formats>
-					<format>html</format>
-					<format>xml</format>
-				</formats>
-			</configuration>
-		</plugin>
-	
-	   </plugins>
-	</reporting>
-	
-	
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.test.maven</groupId>
+    <artifactId>sample-maven-build</artifactId>
+    <version>1</version>
+    <name>sample-maven-build</name>
+    <build>
+        <!-- Source directory configuration -->
+        <sourceDirectory>src</sourceDirectory>
+        <plugins>
+            <!-- Following plugin executes the testng tests -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.14.1</version>
+                <configuration>
+                    <!-- Suite testng xml file to consider for test execution -->
+                    <suiteXmlFiles>
+                        <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+                        <!-- <suiteXmlFile>suites-test-testng.xml</suiteXmlFile> -->
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+            <!-- Compiler plugin configures the java version to be usedfor compiling 
+                the code -->
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    
+    
+    <dependencies>
+        <!-- Dependency libraries to include for compilation -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.3.1</version>
+        </dependency>
+    </dependencies>
+    
+    
 </project>
